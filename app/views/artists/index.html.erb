@@ -1,0 +1,10 @@
+<h1>Artists</h1>
+
+<% Artist.all.each do |artist| %>
+  <%= link_to artist.name, artist_path(artist) %>, <%= artist.song_count%>
+  <% if artist.song_count == 1 %>
+    song
+  <% else %>
+    songs
+  <% end %>
+<% end %>
